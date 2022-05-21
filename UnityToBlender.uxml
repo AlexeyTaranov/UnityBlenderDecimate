@@ -1,0 +1,16 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" editor-extension-mode="True">
+    <ui:Label text="Unity Blender Decimate" style="-unity-text-align: upper-center; font-size: 20px; -unity-font-style: bold;" />
+    <ui:VisualElement style="height: 4px; width: 504px;" />
+    <ui:VisualElement name="blenderPathStep" style="flex-direction: row;">
+        <ui:Button name="blenderPathSelect" text="Edit Blender Path" />
+        <ui:Label name="blenderPath" style="-unity-text-align: middle-left;" />
+    </ui:VisualElement>
+    <uie:ObjectField label="Python Script" name="pythonScript" type="UnityEditor.DefaultAsset, UnityEditor.CoreModule" />
+    <ui:VisualElement name="inputObjectStep">
+        <uie:ObjectField name="inputObject" label="OBJ Model" type="UnityEngine.GameObject, UnityEngine.CoreModule" allow-scene-objects="false" />
+    </ui:VisualElement>
+    <ui:VisualElement name="blenderExecuteStep">
+        <ui:Slider name="decimate" label="Decimate" value="1" high-value="1" show-input-field="true" />
+        <ui:Button name="execute" text="Run" display-tooltip-when-elided="true" />
+    </ui:VisualElement>
+</ui:UXML>
